@@ -1,15 +1,20 @@
-/*
-11. WAP to implement the concept of method overloading and method overriding. And Abstract Class.
+//11. WAP to implement the concept of method overloading and method overriding. And Abstract Class.
 
 package lab.exp4;
 
 public abstract class ovrRdovrL {
         abstract void abs();
     public static void main(String[] args) {
-        language lang=new language();
+        /*language lang=new language();
         ide id=new ide();
         lang.abs();
-        id.abs();
+        id.abs();*/
+        pc myhp=new hp();
+        pc mylv =new lenovo();
+        myhp.company();
+        myhp.cpu();
+        mylv.company();
+        mylv.cpu();
 
     }
 }
@@ -51,12 +56,25 @@ class ide extends ovrRdovrL
         System.out.println(x+" "+y);
     }
 }
-class pc{
+interface pc{
     void company();
     void cpu();
 }
-class hp implements
+class hp implements pc
 {
-
+    public void company() {
+        System.out.println("HP");
+    }
+    public void cpu(){
+        System.out.println("Intel I9");
+    }
 }
-*/
+class lenovo implements pc
+{
+    public void company() {
+        System.out.println("Lenovo");
+    }
+    public void cpu(){
+        System.out.println("AMD Ryzen 5000");
+    }
+}

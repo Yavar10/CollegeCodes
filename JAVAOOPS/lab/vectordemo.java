@@ -1,3 +1,4 @@
+/*
 package lab;
 
 import java.util.Vector;
@@ -28,6 +29,7 @@ public class vectordemo {
     }
 }
 
+*/
 /*
 * package lab;
 
